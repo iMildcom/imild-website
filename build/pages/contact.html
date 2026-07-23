@@ -1,0 +1,33 @@
+<div class="grid2" style="align-items:start;">
+  <div>
+    <div class="stamp" data-i18n="contact.stamp">Sag Hallo</div>
+    <h1 class="big" data-i18n="contact.h1">Kon<em>takt.</em></h1>
+    <p class="lead" data-i18n="contact.lead">Presse, Partnerschaften, Support oder einfach eine gute Idee — wir lesen alles. Antwort meist in &lt; 24 Stunden.</p>
+    <div class="underline"></div>
+    <div style="margin-block-start:26px;display:flex;flex-direction:column;gap:9px;">
+      <div class="crow glass"><span aria-hidden="true">📬</span> <span data-i18n="contact.c1">Allgemein &amp; Support</span> — <b>s@imild.com</b></div>
+      <div class="crow glass"><span aria-hidden="true">📰</span> <span data-i18n="contact.c2">Presse</span> — <b>presse@imild.com</b></div>
+      <div class="crow glass"><span aria-hidden="true">⚖️</span> <span data-i18n="contact.c3">Legal &amp; DMCA</span> — <b>i@imild.com</b></div>
+      <div class="crow glass"><span aria-hidden="true">📍</span> iMild LLC · 32648 International Blvd Ste 301 #285 · Oakland, CA 94601, USA</div>
+    </div>
+  </div>
+  <form class="glass" style="padding:24px;" id="contactform">
+    <div class="field">
+      <label for="cf-name" data-i18n="contact.f.name">Name</label>
+      <input id="cf-name" name="name" required data-i18n-ph="contact.f.name.ph" placeholder="Dein Name">
+    </div>
+    <div class="field">
+      <label for="cf-mail" data-i18n="contact.f.mail">E-Mail</label>
+      <input id="cf-mail" name="email" type="email" required data-i18n-ph="contact.f.mail.ph" placeholder="du@beispiel.com">
+    </div>
+    <div class="field">
+      <label for="cf-topic" data-i18n="contact.f.topic">Thema</label>
+      <input id="cf-topic" name="topic" data-i18n-ph="contact.f.topic.ph" placeholder="Worum geht's?">
+    </div>
+    <div class="field">
+      <label for="cf-msg" data-i18n="contact.f.msg">Nachricht</label>
+      <textarea id="cf-msg" name="message" rows="5" required data-i18n-ph="contact.f.msg.ph" placeholder="Schreib uns…"></textarea>
+    </div>
+    <button class="btn" type="submit" style="display:block;width:100%;" data-i18n="contact.f.send">Nachricht senden</button>
+  </form>
+</div>
