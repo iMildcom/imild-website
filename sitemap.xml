@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://imildcom.github.io/imild-website/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/brands.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/newsroom.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/careers.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/legal.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/conax.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/smejj.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imildcom.github.io/imild-website/smyst.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

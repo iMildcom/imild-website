@@ -3,12 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
 <title>smejj — Software, die sich selbst baut</title>
-<meta name="description" content="smejj ist das autonome AI-Coding-Betriebssystem mit eigenem Modell und Verification Pipeline. Ein iMild-Produkt.">
+<meta name="description" content="smejj ist das autonome AI-Coding-Betriebssystem mit eigenem Modell und Verification Pipeline. Ein iMild.com-Produkt.">
+<link rel="canonical" href="https://imildcom.github.io/imild-website/smejj.html">
+<meta name="theme-color" content="#0F172A">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iMild.com">
+<meta property="og:title" content="smejj — Software, die sich selbst baut">
+<meta property="og:description" content="smejj ist das autonome AI-Coding-Betriebssystem mit eigenem Modell und Verification Pipeline. Ein iMild.com-Produkt.">
+<meta property="og:url" content="https://imildcom.github.io/imild-website/smejj.html">
+<meta property="og:image" content="https://imildcom.github.io/imild-website/assets/og-image.png">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="smejj — Software, die sich selbst baut">
+<meta name="twitter:description" content="smejj ist das autonome AI-Coding-Betriebssystem mit eigenem Modell und Verification Pipeline. Ein iMild.com-Produkt.">
+<meta name="twitter:image" content="https://imildcom.github.io/imild-website/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="smejj">
+<a class="skip" href="#main" data-i18n="a11y.skip">Zum Inhalt springen</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- iMild.com — Ring mit Fahne, offizieller Blau-Gradient -->
@@ -128,11 +147,11 @@
 
 <div class="scene" aria-hidden="true"><svg><use href="#dv-skyline"/></svg></div>
 <div class="shade" aria-hidden="true"></div>
-<main>
+<main id="main">
 <div class="bheader" style="padding-inline:0;">
   <div class="blogo" style="color:#9ffefe;"><svg viewBox="0 0 260 200" style="width:44px;height:34px;" aria-hidden="true"><use href="#logo-smejj"/></svg>smejj</div>
   <div style="display:flex;align-items:center;gap:9px;">
-    <a class="byline" href="index.html"><svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg> <span data-i18n="brand.byline">ein <b>iMild</b> Unternehmen ↗</span></a>
+    <a class="byline" href="index.html"><svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg> <span data-i18n="brand.byline">ein <b>iMild.com</b> Unternehmen ↗</span></a>
     <button class="langbtn" id="langbtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
   </div>
 </div>
@@ -161,17 +180,17 @@
   </div>
   <div style="display:flex;flex-direction:column;gap:12px;">
     <div class="feat glass f-smejj">
-      <div class="fic" aria-hidden="true">📦</div>
+      <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg></div>
       <b>Task Capsule First</b>
       <p data-i18n="smejj.f1.p">Jede Aufgabe wird zur Kapsel: Ziel, Kontext, Tests, Budget — bevor eine Zeile Code entsteht.</p>
     </div>
     <div class="feat glass f-smejj">
-      <div class="fic" aria-hidden="true">✅</div>
+      <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
       <b>Verification Pipeline</b>
       <p data-i18n="smejj.f2.p">Nichts wird gemerged, was nicht testgetrieben bewiesen ist. Strikt. Immer.</p>
     </div>
     <div class="feat glass f-smejj">
-      <div class="fic" aria-hidden="true">🧭</div>
+      <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M16 8l-2.5 5.5L8 16l2.5-5.5z"/></svg></div>
       <b>Multi-Model-Router + BYOK</b>
       <p data-i18n="smejj.f3.p">smejj 1.0 als Kern, andere Modelle als Fallback — Free-Tiers zuerst, deine Keys, deine Kosten: oft $0.</p>
     </div>
@@ -188,9 +207,9 @@
     <a href="legal.html" data-i18n="footer.imprint">Impressum</a>
     <a href="legal.html" data-i18n="footer.privacy">Datenschutz</a>
   </div>
-  <div class="copy" data-i18n="footer.copy">© 2026 iMild LLC · Oakland, CA · 51 Sprachen 🌍</div>
+  <div class="copy" data-i18n="footer.copy">© 2026 iMild.com · iMild LLC, Oakland, CA · 51 Sprachen</div>
 </footer>
-<div class="sig">handmade in silicon valley ✎</div>
+<div class="sig">handmade in silicon valley</div>
 
 <script src="assets/i18n.js"></script>
 <script src="assets/site.js"></script>

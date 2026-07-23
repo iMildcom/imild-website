@@ -3,12 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
 <title>con.ax — Die Welt ist deine Timeline</title>
-<meta name="description" content="con.ax verbindet Menschen über Orte: das soziale Netzwerk mit interaktiven Karten. Ein iMild-Produkt.">
+<meta name="description" content="con.ax verbindet Menschen über Orte: das soziale Netzwerk mit interaktiven Karten. Ein iMild.com-Produkt.">
+<link rel="canonical" href="https://imildcom.github.io/imild-website/conax.html">
+<meta name="theme-color" content="#0F172A">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="iMild.com">
+<meta property="og:title" content="con.ax — Die Welt ist deine Timeline">
+<meta property="og:description" content="con.ax verbindet Menschen über Orte: das soziale Netzwerk mit interaktiven Karten. Ein iMild.com-Produkt.">
+<meta property="og:url" content="https://imildcom.github.io/imild-website/conax.html">
+<meta property="og:image" content="https://imildcom.github.io/imild-website/assets/og-image.png">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="con.ax — Die Welt ist deine Timeline">
+<meta name="twitter:description" content="con.ax verbindet Menschen über Orte: das soziale Netzwerk mit interaktiven Karten. Ein iMild.com-Produkt.">
+<meta name="twitter:image" content="https://imildcom.github.io/imild-website/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="conax">
+<a class="skip" href="#main" data-i18n="a11y.skip">Zum Inhalt springen</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- iMild.com — Ring mit Fahne, offizieller Blau-Gradient -->
@@ -128,11 +147,11 @@
 
 <div class="scene" aria-hidden="true"><svg><use href="#dv-bay"/></svg></div>
 <div class="shade" aria-hidden="true"></div>
-<main>
+<main id="main">
 <div class="bheader" style="padding-inline:0;">
   <div class="blogo" style="color:#c9aef7;"><svg viewBox="0 0 512 512" style="width:38px;height:38px;" aria-hidden="true"><use href="#logo-conax"/></svg>con.ax</div>
   <div style="display:flex;align-items:center;gap:9px;">
-    <a class="byline" href="index.html"><svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg> <span data-i18n="brand.byline">ein <b>iMild</b> Unternehmen ↗</span></a>
+    <a class="byline" href="index.html"><svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg> <span data-i18n="brand.byline">ein <b>iMild.com</b> Unternehmen ↗</span></a>
     <button class="langbtn" id="langbtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
   </div>
 </div>
@@ -172,17 +191,17 @@
 
 <div class="grid3" style="margin-block-start:16px;">
   <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">🗺</div>
+    <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></div>
     <b data-i18n="conax.f1.t">Karten-Feed</b>
     <p data-i18n="conax.f1.p">Inhalte dort entdecken, wo sie entstehen. Zoom rein in deine Straße — oder raus auf die Welt.</p>
   </div>
   <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">📍</div>
+    <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
     <b data-i18n="conax.f2.t">Orte &amp; Events</b>
     <p data-i18n="conax.f2.p">Jeder Ort hat eine Seite: Bewertungen, Stories, Live-Momente von Menschen, die wirklich da sind.</p>
   </div>
   <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">🤝</div>
+    <div class="fic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
     <b data-i18n="conax.f3.t">Ehrliches Netzwerk</b>
     <p data-i18n="conax.f3.p">Transparenter Feed-Algorithmus, keine Datensammelwut — das soziale Netzwerk, das es ernst meint.</p>
   </div>
@@ -198,9 +217,9 @@
     <a href="legal.html" data-i18n="footer.imprint">Impressum</a>
     <a href="legal.html" data-i18n="footer.privacy">Datenschutz</a>
   </div>
-  <div class="copy" data-i18n="footer.copy">© 2026 iMild LLC · Oakland, CA · 51 Sprachen 🌍</div>
+  <div class="copy" data-i18n="footer.copy">© 2026 iMild.com · iMild LLC, Oakland, CA · 51 Sprachen</div>
 </footer>
-<div class="sig">handmade in silicon valley ✎</div>
+<div class="sig">handmade in silicon valley</div>
 
 <script src="assets/i18n.js"></script>
 <script src="assets/site.js"></script>
