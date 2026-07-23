@@ -1,8 +1,8 @@
 <header class="siteheader">
-  <a class="logo" href="index.html" aria-label="iMild — Startseite">
-    <svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg><span>iMild</span>
+  <a class="logo" href="index.html" data-i18n-aria="a11y.home" aria-label="iMild.com — Startseite">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg><span>iMild.com</span>
   </a>
-  <nav class="sitenav" id="sitenav" aria-label="Hauptnavigation">
+  <nav class="sitenav" id="sitenav" aria-label="iMild.com">
     <a href="index.html" class="{cur:home}" data-i18n="nav.home">Start</a>
     <a href="about.html" class="{cur:about}" data-i18n="nav.about">Über uns</a>
     <a href="brands.html" class="{cur:brands}" data-i18n="nav.brands">Marken</a>
@@ -12,7 +12,9 @@
     <a href="legal.html" class="{cur:legal}" data-i18n="nav.legal">Legal</a>
   </nav>
   <div class="headtools">
-    <button class="langbtn" id="langbtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
-    <button class="menubtn" id="menubtn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="sitenav">☰</button>
+    <button class="langbtn" id="langbtn" type="button" data-i18n-aria="a11y.lang" data-i18n-title="a11y.lang" aria-label="Sprache wechseln / Switch language" title="Sprache wechseln / Switch language">EN</button>
+    <button class="menubtn" id="menubtn" type="button" data-i18n-aria="a11y.menu" data-i18n-title="a11y.menu" aria-label="Menü öffnen" title="Menü öffnen" aria-expanded="false" aria-controls="sitenav">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
 </header>
