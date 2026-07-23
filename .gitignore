@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node / tooling (falls später hinzugefügt)
+node_modules/
+npm-debug.log*
+
+# Build-Artefakte
+*.zip
