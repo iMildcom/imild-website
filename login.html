@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Anmelden — iMild.com</title>
+<meta name="description" content="Bei iMild.com anmelden oder registrieren — mit E-Mail, Google, Apple, GitHub und mehr.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="assets/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/login.css">
+</head>
+<body data-page="login">
+
+<!-- ============ Icon-Definitionen (Marke + Provider) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="logo-imild" viewBox="0 0 512 512">
+    <linearGradient id="imildGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1AB8FB"/><stop offset=".5" stop-color="#1B5CF5"/><stop offset="1" stop-color="#5235E5"/>
+    </linearGradient>
+    <circle cx="257" cy="85" r="56" fill="url(#imildGrad)"/>
+    <path d="M178.8 124.5 A170 170 0 0 0 217.8 441.6" fill="none" stroke="url(#imildGrad)" stroke-width="60"/>
+    <path d="M333.2 124.5 A170 170 0 0 1 353.5 415.2" fill="none" stroke="url(#imildGrad)" stroke-width="60"/>
+    <path d="M302 183 L243 242 L232 428 Q230 452 254 455 L334 458 Z" fill="url(#imildGrad)"/>
+  </symbol>
+
+  <!-- Provider-Icons (Markenfarben bleiben zur Wiedererkennung erhalten) -->
+  <symbol id="ic-google" viewBox="0 0 48 48">
+    <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/>
+    <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+    <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.1-11.3-7.6l-6.5 5C9.6 39.6 16.2 44 24 44z"/>
+    <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C39.9 36.4 44 31 44 24c0-1.3-.1-2.3-.4-3.5z"/>
+  </symbol>
+  <symbol id="ic-apple" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M17.05 12.04c-.03-2.6 2.13-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.14-2.53.99-1.45 1.4-2.85 1.42-2.93-.03-.01-2.72-1.04-2.75-4.13zM14.6 4.44c.71-.86 1.19-2.06 1.06-3.25-1.02.04-2.26.68-2.99 1.54-.66.76-1.23 1.98-1.08 3.15 1.14.09 2.3-.58 3.01-1.44z"/>
+  </symbol>
+  <symbol id="ic-github" viewBox="0 0 24 24">
+    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
+  </symbol>
+  <symbol id="ic-gitlab" viewBox="0 0 24 24">
+    <path fill="#E24329" d="M12 21.42l3.68-11.33H8.32L12 21.42z"/>
+    <path fill="#FC6D26" d="M12 21.42L8.32 10.09H3.16L12 21.42z"/>
+    <path fill="#FCA326" d="M3.16 10.09l-1.12 3.44a.76.76 0 0 0 .28.85L12 21.42 3.16 10.09z"/>
+    <path fill="#E24329" d="M3.16 10.09h5.16L6.1 3.26a.38.38 0 0 0-.72 0L3.16 10.09z"/>
+    <path fill="#FC6D26" d="M12 21.42l3.68-11.33h5.16L12 21.42z"/>
+    <path fill="#FCA326" d="M20.84 10.09l1.12 3.44a.76.76 0 0 1-.28.85L12 21.42l8.84-11.33z"/>
+    <path fill="#E24329" d="M20.84 10.09h-5.16l2.22-6.83a.38.38 0 0 1 .72 0l2.22 6.83z"/>
+  </symbol>
+  <symbol id="ic-facebook" viewBox="0 0 24 24">
+    <path fill="#1877F2" d="M24 12c0-6.63-5.37-12-12-12S0 5.37 0 12c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08V12h3.05V9.36c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.93-1.95 1.87V12h3.32l-.53 3.47h-2.79v8.38C19.61 22.95 24 17.99 24 12z"/>
+  </symbol>
+  <symbol id="ic-microsoft" viewBox="0 0 24 24">
+    <path fill="#F25022" d="M2 2h9.5v9.5H2z"/><path fill="#7FBA00" d="M12.5 2H22v9.5h-9.5z"/>
+    <path fill="#00A4EF" d="M2 12.5h9.5V22H2z"/><path fill="#FFB900" d="M12.5 12.5H22V22h-9.5z"/>
+  </symbol>
+  <symbol id="ic-passkey" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+      d="M12 11.2a2 2 0 0 1 2 2c0 2-.4 3.9-1 5.6M8.4 8.6A5 5 0 0 1 17 12.1c0 1 0 2.1-.3 3.3M5.7 12.5a6.4 6.4 0 0 1 3-5.6M9 21c-.7-1.3-1.6-3.1-1.6-6.2a4.6 4.6 0 0 1 9.2 0"/>
+  </symbol>
+  <symbol id="ic-magic" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M3 6h18v12H3z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3.6 6.6 12 12.7l8.4-6.1"/>
+  </symbol>
+  <symbol id="ic-eye" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+    <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+  </symbol>
+  <symbol id="ic-eye-off" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.4 5.2A9.6 9.6 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-3.1 3.9M6.1 6.1A17 17 0 0 0 2 12s3.5 7 10 7a9.5 9.5 0 0 0 3.4-.6"/>
+  </symbol>
+</defs></svg>
+
+<!-- ============ Hintergrund (Website-Look) ============ -->
+<div class="scene login-scene" aria-hidden="true"></div>
+<div class="shade" aria-hidden="true"></div>
+
+<!-- ============ Kopfzeile: Logo + Sprachwahl ============ -->
+<header class="siteheader login-header">
+  <a class="logo" href="./" aria-label="iMild — Startseite">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg><span>iMild</span>
+  </a>
+  <div class="headtools">
+    <button class="langbtn" id="langbtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
+  </div>
+</header>
+
+<!-- ============ Login-Karte ============ -->
+<main class="login-main">
+  <section class="auth-card glass" data-mode="login" aria-labelledby="auth-title">
+
+    <div class="auth-brand">
+      <svg viewBox="0 0 512 512" class="auth-logo" aria-hidden="true"><use href="#logo-imild"/></svg>
+      <h1 id="auth-title" class="auth-title" data-i18n="login.title">Willkommen bei iMild</h1>
+      <p class="auth-sub" data-i18n="login.subtitle">Melde dich an oder erstelle in Sekunden ein Konto.</p>
+    </div>
+
+    <!-- Tabs: Anmelden / Registrieren -->
+    <div class="auth-tabs" role="tablist" aria-label="Anmelden oder Registrieren">
+      <button class="auth-tab is-active" id="tab-login" role="tab" aria-selected="true" aria-controls="auth-form" data-mode="login" data-i18n="login.tab.signin">Anmelden</button>
+      <button class="auth-tab" id="tab-register" role="tab" aria-selected="false" aria-controls="auth-form" data-mode="register" data-i18n="login.tab.signup">Registrieren</button>
+    </div>
+
+    <!-- E-Mail / Passwort -->
+    <form class="auth-form" id="auth-form" novalidate autocomplete="on" role="tabpanel" aria-labelledby="tab-login">
+      <div class="field only-register">
+        <label for="f-name" data-i18n="login.field.name">Anzeigename</label>
+        <input type="text" id="f-name" name="name" autocomplete="name" data-i18n-ph="login.ph.name" placeholder="Wie sollen wir dich nennen?">
+      </div>
+
+      <div class="field">
+        <label for="f-email" data-i18n="login.field.email">E-Mail-Adresse</label>
+        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email" required data-i18n-ph="login.ph.email" placeholder="du@beispiel.com">
+      </div>
+
+      <div class="field">
+        <div class="label-row">
+          <label for="f-password" data-i18n="login.field.password">Passwort</label>
+          <button type="button" class="link-mini only-login" id="forgot-link" data-i18n="login.forgot">Passwort vergessen?</button>
+        </div>
+        <div class="pw-wrap">
+          <input type="password" id="f-password" name="password" autocomplete="current-password" required minlength="8" data-i18n-ph="login.ph.password" placeholder="Mindestens 8 Zeichen">
+          <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Passwort anzeigen" title="Passwort anzeigen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-eye" id="pw-eye"/></svg>
+          </button>
+        </div>
+        <p class="field-hint only-register" data-i18n="login.hint.password">Mindestens 8 Zeichen. Tipp: je länger, desto sicherer.</p>
+      </div>
+
+      <p class="auth-msg" id="auth-msg" role="alert" aria-live="polite" hidden></p>
+
+      <button type="submit" class="btn auth-submit" id="auth-submit">
+        <span class="btn-label" data-i18n="login.cta.signin">Anmelden</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+
+      <p class="auth-switch">
+        <span class="only-login"  data-i18n="login.noaccount">Noch kein Konto?</span>
+        <span class="only-register" data-i18n="login.haveaccount">Bereits ein Konto?</span>
+        <button type="button" class="link-mini" id="switch-mode">
+          <span class="only-login" data-i18n="login.switch.signup">Jetzt registrieren</span>
+          <span class="only-register" data-i18n="login.switch.signin">Jetzt anmelden</span>
+        </button>
+      </p>
+    </form>
+
+    <!-- Trenner -->
+    <div class="auth-divider"><span data-i18n="login.or">oder fortfahren mit</span></div>
+
+    <!-- Primäre Social-Logins -->
+    <div class="provider-list">
+      <button type="button" class="provider" data-provider="google" data-status="ready"
+              aria-label="Mit Google anmelden" title="Mit Google anmelden">
+        <svg class="provider-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#ic-google"/></svg>
+        <span class="provider-label" data-i18n="login.provider.google">Mit Google anmelden</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="apple" data-status="soon"
+              aria-label="Mit Apple anmelden — bald verfügbar" title="Mit Apple anmelden — bald verfügbar">
+        <svg class="provider-ic ic-mono" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-apple"/></svg>
+        <span class="provider-label" data-i18n="login.provider.apple">Mit Apple anmelden</span>
+        <span class="soon-badge" data-i18n="login.soon">Bald</span>
+      </button>
+    </div>
+
+    <!-- Weitere Anmeldeoptionen (aufklappbar) -->
+    <button type="button" class="more-toggle" id="more-toggle" aria-expanded="false" aria-controls="more-panel">
+      <span data-i18n="login.more">Weitere Anmeldeoptionen</span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+    </button>
+
+    <div class="provider-list more-panel" id="more-panel" hidden>
+      <button type="button" class="provider" data-provider="github" data-status="ready"
+              aria-label="Mit GitHub anmelden" title="Mit GitHub anmelden">
+        <svg class="provider-ic ic-mono" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-github"/></svg>
+        <span class="provider-label" data-i18n="login.provider.github">Mit GitHub anmelden</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="gitlab" data-status="ready"
+              aria-label="Mit GitLab anmelden" title="Mit GitLab anmelden">
+        <svg class="provider-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-gitlab"/></svg>
+        <span class="provider-label" data-i18n="login.provider.gitlab">Mit GitLab anmelden</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="facebook" data-status="soon"
+              aria-label="Mit Facebook anmelden — bald verfügbar" title="Mit Facebook anmelden — bald verfügbar">
+        <svg class="provider-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-facebook"/></svg>
+        <span class="provider-label" data-i18n="login.provider.facebook">Mit Facebook anmelden</span>
+        <span class="soon-badge" data-i18n="login.soon">Bald</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="microsoft" data-status="soon"
+              aria-label="Mit Microsoft anmelden — bald verfügbar" title="Mit Microsoft anmelden — bald verfügbar">
+        <svg class="provider-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-microsoft"/></svg>
+        <span class="provider-label" data-i18n="login.provider.microsoft">Mit Microsoft anmelden</span>
+        <span class="soon-badge" data-i18n="login.soon">Bald</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="passkey" data-status="soon"
+              aria-label="Mit Passkey / Biometrie anmelden — bald verfügbar" title="Mit Passkey / Biometrie anmelden — bald verfügbar">
+        <svg class="provider-ic ic-mono" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-passkey"/></svg>
+        <span class="provider-label" data-i18n="login.provider.passkey">Passkey / Biometrie</span>
+        <span class="soon-badge" data-i18n="login.soon">Bald</span>
+      </button>
+
+      <button type="button" class="provider" data-provider="magic" data-status="soon"
+              aria-label="Einmal-Code per E-Mail oder SMS — bald verfügbar" title="Einmal-Code per E-Mail oder SMS — bald verfügbar">
+        <svg class="provider-ic ic-mono" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-magic"/></svg>
+        <span class="provider-label" data-i18n="login.provider.magic">Einmal-Code per E-Mail / SMS</span>
+        <span class="soon-badge" data-i18n="login.soon">Bald</span>
+      </button>
+    </div>
+
+    <p class="auth-legal">
+      <span data-i18n="login.legal.pre">Mit der Anmeldung akzeptierst du unsere</span>
+      <a href="legal.html" data-i18n="login.legal.terms">Nutzungsbedingungen</a>
+      <span data-i18n="login.legal.and">und</span>
+      <a href="legal.html" data-i18n="login.legal.privacy">Datenschutzerklärung</a>.
+    </p>
+  </section>
+
+  <a class="back-home" href="./" data-i18n="login.back">← Zurück zur Startseite</a>
+</main>
+
+<!-- Versteckte Texte für JS-Meldungen (laufen durch das i18n-System) -->
+<div id="js-i18n" hidden aria-hidden="true">
+  <span data-i18n="login.js.soon">Diese Anmeldeoption ist bald verfügbar.</span>
+  <span data-i18n="login.js.errEmail">Bitte gib eine gültige E-Mail-Adresse ein.</span>
+  <span data-i18n="login.js.errPassword">Das Passwort muss mindestens 8 Zeichen haben.</span>
+  <span data-i18n="login.js.errName">Bitte gib einen Anzeigenamen ein.</span>
+  <span data-i18n="login.js.errGeneric">Etwas ist schiefgelaufen. Bitte versuche es erneut.</span>
+  <span data-i18n="login.js.errNetwork">Verbindung fehlgeschlagen. Prüfe deine Internetverbindung.</span>
+  <span data-i18n="login.js.errForgotEmail">Bitte gib zuerst deine E-Mail-Adresse ein.</span>
+  <span data-i18n="login.js.okForgot">Falls ein Konto existiert, haben wir dir einen Link gesendet.</span>
+  <span data-i18n="login.js.okSignedin">Erfolgreich angemeldet! Weiterleitung …</span>
+  <span data-i18n="login.js.okRegistered">Konto erstellt! Weiterleitung …</span>
+  <span data-i18n="login.js.showPw">Passwort anzeigen</span>
+  <span data-i18n="login.js.hidePw">Passwort verbergen</span>
+</div>
+
+<!-- Toast für „Bald verfügbar" -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<div class="sig" aria-hidden="true">handmade in silicon valley ✎</div>
+
+<script>
+  /* Backend-Basis-URL — Login-Seite läuft auf iMild.com (GitHub Pages),
+     die Auth-API auf api.iMild.com (Zeabur Control-Server). */
+  window.IMILD_AUTH = { apiBase: 'https://api.imild.com' };
+</script>
+<script src="assets/i18n.js"></script>
+<script src="assets/login.js"></script>
+</body>
+</html>
