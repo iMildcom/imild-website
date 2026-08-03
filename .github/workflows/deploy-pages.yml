@@ -1,0 +1,69 @@
+# iMild.com — Zero-cost CI/CD pipeline (v2)
+# Target repo:  iMildcom/imild-website (private, source)
+# Pages mirror: iMildcom/imild-site    (public, receives dist/ only)
+#
+# v2 changes vs. Infra/github-workflows-deploy.yml (v1):
+#   - removed: iDrive e2 asset sync + Salad watchdog (services dropped 2026-07-23,
+#     see Project_Goals.md; object storage / workers are pending a separate decision)
+#   - kept:    all cost safeguards (concurrency cancel, path filter, timeouts,
+#              pre-compression, orphan mirror)
+#
+# Cost safeguards (ARCHITECTURE_v2.md §4): S1 S2 S3 S6 S7
+
+name: deploy-pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "docs/**"
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-pages-${{ github.ref }}
+  cancel-in-progress: true # S1
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10 # S3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build static site into dist/
+        run: |
+          set -euo pipefail
+          if [ -f build/build.py ]; then
+            python3 build/build.py          # partials -> dist/
+          else
+            mkdir -p dist
+            rsync -a --exclude 'dist' --exclude '.git*' --exclude 'build' \
+                  --exclude 'infra' --exclude 'packages' --exclude 'workers' \
+                  --exclude 'scripts' --exclude '.env*' ./ dist/
+          fi
+          # Custom domain for GitHub Pages
+          echo "imild.com" > dist/CNAME
+
+      - name: Pre-compress text assets (S7)
+        run: |
+          set -euo pipefail
+          find dist -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \
+            -o -name '*.svg' -o -name '*.json' \) -print0 |
+            xargs -0 -I{} sh -c 'gzip -k -9 "{}" && brotli -k -q 11 "{}" || true'
+          du -sh dist
+
+      - name: Deploy dist/ to public Pages repo
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.PAGES_DEPLOY_KEY }}
+          external_repository: iMildcom/imild-site
+          publish_branch: main
+          publish_dir: ./dist
+          force_orphan: true # S6: public repo keeps no history -> stays tiny
+          commit_message: "chore: deploy ${{ github.sha }}"
+
