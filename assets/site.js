@@ -21,7 +21,7 @@
       var v = function (id) { return (document.getElementById(id) || {}).value || ''; };
       var subject = '[iMild.com] ' + (v('cf-topic') || 'Kontakt');
       var body = v('cf-msg') + '\n\n— ' + v('cf-name') + ' <' + v('cf-mail') + '>';
-      window.location.href = 'mailto:s@imild.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = 'mailto:' + ['s','iMild.com'].join('@') + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
   }
 })();
