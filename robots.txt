@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imildcom.github.io/imild-website/sitemap.xml
+Sitemap: https://imild.com/sitemap.xml
