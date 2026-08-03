@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>con.ax — Die Welt ist deine Timeline</title>
-<meta name="description" content="con.ax verbindet Menschen über Orte: das soziale Netzwerk mit interaktiven Karten. Ein iMild.com-Produkt.">
+<title>Investoren &amp; Partner — iMild.com</title>
+<meta name="description" content="Investieren Sie in iMild.com — die Dachmarke hinter con.ax, smejj und smyst. Beteiligungen, Partnerschaften und volle Transparenz.">
 <link rel="icon" href="assets/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#0b1026">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="conax">
+<body data-page="invest">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- iMild.com — Ring mit Fahne, offizieller Blau-Gradient -->
@@ -130,77 +130,89 @@
   </defs>
 </svg>
 
-<div class="scene" aria-hidden="true"><svg><use href="#dv-bay"/></svg></div>
+<div class="scene" aria-hidden="true"><svg><use href="#dv-goldengate"/></svg></div>
 <div class="shade" aria-hidden="true"></div>
-<main>
-<div class="bheader" style="padding-inline:0;">
-  <div class="blogo" style="color:#c9aef7;"><svg viewBox="0 0 512 512" style="width:38px;height:38px;" aria-hidden="true"><use href="#logo-conax"/></svg>con.ax</div>
-  <div style="display:flex;align-items:center;gap:9px;">
-    <a class="byline" href="./"><svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg> <span data-i18n="brand.byline">ein <b>iMild.com</b> Unternehmen ↗</span></a>
-    <a class="byline" href="login.html" data-i18n="nav.login">Anmelden</a>
+<header class="siteheader">
+  <a class="logo" href="./" aria-label="iMild.com — Startseite">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><use href="#logo-imild"/></svg><span>iMild.com</span>
+  </a>
+  <nav class="sitenav" id="sitenav" aria-label="Hauptnavigation">
+    <a href="./" class="" data-i18n="nav.home">Start</a>
+    <a href="about.html" class="" data-i18n="nav.about">Über uns</a>
+    <a href="brands.html" class="" data-i18n="nav.brands">Marken</a>
+    <a href="newsroom.html" class="" data-i18n="nav.news">Newsroom</a>
+    <a href="careers.html" class="" data-i18n="nav.jobs">Karriere</a>
+    <a href="investors.html" class="cur" data-i18n="nav.invest">Investoren</a>
+    <a href="contact.html" class="" data-i18n="nav.contact">Kontakt</a>
+    <a href="legal.html" class="" data-i18n="nav.legal">Legal</a>
+    <a href="login.html" class="" data-i18n="nav.login">Anmelden</a>
+  </nav>
+  <div class="headtools">
     <button class="langbtn" id="langbtn" type="button" aria-label="Sprache wechseln / Switch language">EN</button>
+    <button class="menubtn" id="menubtn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="sitenav">☰</button>
   </div>
-</div>
-
-<div class="stamp" style="color:#c9aef7;border-color:rgba(123,63,228,.6);">connect what counts.</div>
-<h1 class="big" data-i18n="conax.h1">Die Welt ist deine<br><em style="color:#b98af5;">Timeline.</em></h1>
-<p class="lead" data-i18n="conax.lead">con.ax ist das soziale Netzwerk, das die Welt auf eine Karte bringt — mit fünf Bereichen in einer App: <b>Clips</b>, <b>Market</b>, <b>Chat</b>, <b>Map</b> und <b>Begegnungen</b>. Weltweit, kostenlos, ehrlich.</p>
+</header>
+<main>
+<div class="stamp" data-i18n="invest.stamp">Investor Relations</div>
+<h1 class="big" data-i18n="invest.h1">Investiere in<br><em>drei Portale.</em></h1>
+<p class="lead" data-i18n="invest.lead">iMild.com baut drei globale Plattformen auf einem gemeinsamen Fundament: <b>con.ax</b> (Social Networking), <b>smejj</b> (AI Coding OS) und <b>smyst</b> (Digital AI Twins). Wir suchen Investoren und strategische Partner, die diese Vision mit uns skalieren.</p>
+<div class="underline"></div>
 <div class="btnrow">
-  <a class="btn" style="background:var(--conax);" href="https://con.ax" target="_blank" rel="noopener" data-i18n="conax.cta1">con.ax besuchen ↗</a>
-  <a class="btn ghost" href="brands.html" data-i18n="conax.cta2">Karte ansehen</a>
+  <a class="btn em-link" data-u="i" data-s="Investoren-Anfrage" href="#" data-i18n="invest.cta1">Investoren-Gespräch anfragen</a>
+  <a class="btn ghost" href="brands.html" data-i18n="invest.cta2">Unsere Portale ansehen</a>
 </div>
 
-<!-- Mini-Weltkarte -->
-<div class="glass" style="margin-block-start:30px;padding:0;position:relative;height:200px;overflow:hidden;border-color:rgba(123,63,228,.4);">
-  <svg viewBox="0 0 1000 190" style="width:100%;height:100%;display:block;" role="img" aria-label="Interaktive Weltkarte mit Live-Stories">
-    <rect width="1000" height="190" fill="#0a1b2e"/>
-    <g fill="#16334f">
-      <path d="M80 60 Q140 30 200 55 L230 90 Q180 120 120 105 Z"/>
-      <path d="M280 100 Q320 80 370 95 L400 140 Q340 160 300 140 Z"/>
-      <path d="M470 40 Q560 20 650 45 L690 85 Q600 110 500 95 Z"/>
-      <path d="M700 100 Q760 85 830 100 L860 140 Q780 160 720 140 Z"/>
-      <path d="M880 50 Q930 40 960 60 L950 90 Q910 100 880 85 Z"/>
-    </g>
-    <g>
-      <circle cx="180" cy="70" r="7" fill="#7B3FE4" opacity=".9"/><circle cx="180" cy="70" r="13" fill="none" stroke="#7B3FE4" opacity=".4"/>
-      <circle cx="560" cy="60" r="7" fill="#f97316" opacity=".9"/><circle cx="560" cy="60" r="13" fill="none" stroke="#f97316" opacity=".4"/>
-      <circle cx="790" cy="118" r="7" fill="#10b981" opacity=".9"/><circle cx="790" cy="118" r="13" fill="none" stroke="#10b981" opacity=".4"/>
-      <circle cx="335" cy="118" r="5" fill="#e879f9" opacity=".9"/>
-      <path d="M180 70 Q370 -10 560 60" stroke="#7B3FE4" stroke-width="1.4" fill="none" opacity=".55" stroke-dasharray="5 4"/>
-      <path d="M560 60 Q680 110 790 118" stroke="#f97316" stroke-width="1.4" fill="none" opacity=".55" stroke-dasharray="5 4"/>
-    </g>
-    <text x="196" y="63" fill="#ddccfa" font-size="11" data-i18n="conax.map1">San Francisco · 214 Stories</text>
-    <text x="576" y="53" fill="#ccfefe" font-size="11" data-i18n="conax.map2">Berlin · Live-Event 🔴</text>
-    <text x="700" y="145" fill="#d3ecfd" font-size="11" data-i18n="conax.map3">Bangkok · Trend #streetfood</text>
-  </svg>
+<div class="grid3" style="margin-block-start:28px;">
+  <div class="kpi glass"><span data-i18n="invest.kpi1.k">Märkte ab Tag 1</span><b data-i18n="invest.kpi1.v">51 Sprachen</b></div>
+  <div class="kpi glass"><span data-i18n="invest.kpi2.k">Laufende Infrastruktur</span><b data-i18n="invest.kpi2.v">~ 0 €</b></div>
+  <div class="kpi glass"><span data-i18n="invest.kpi3.k">Portale, ein Login</span><b>3</b></div>
 </div>
 
 <div class="grid3" style="margin-block-start:16px;">
-  <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">🎬</div>
-    <b data-i18n="conax.f1.t">Clips</b>
-    <p data-i18n="conax.f1.p">Kurzvideos wie ein eigener Puls der Welt: aufnehmen, schneiden, teilen — und im Clips-Feed entdecken, was von deiner Straße bis zum anderen Ende der Erde gerade viral geht.</p>
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">🏛</div>
+    <b data-i18n="invest.why1.t">Ein Fundament, drei Wetten</b>
+    <p data-i18n="invest.why1.p">Gemeinsame Infrastruktur, ein Design-System, ein Login — jedes neue Portal startet fast ohne Zusatzkosten. Ein Investment trägt drei Wachstumschancen.</p>
   </div>
-  <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">🛒</div>
-    <b data-i18n="conax.f2.t">Market</b>
-    <p data-i18n="conax.f2.p">Kostenlose Kleinanzeigen — weltweit. Kaufen, verkaufen, verschenken: ohne Gebühren, ohne Provision. Direkt auf der Karte in deiner Nähe oder global suchbar.</p>
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">⚡</div>
+    <b data-i18n="invest.why2.t">Zero-Cost-Architektur</b>
+    <p data-i18n="invest.why2.p">Edge-Netzwerk, S3-Storage, dezentrales GPU-Computing: Betriebskosten nahe null. Kapital fließt in Wachstum — nicht in Cloud-Rechnungen.</p>
   </div>
-  <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">💬</div>
-    <b data-i18n="conax.f3.t">Chat</b>
-    <p data-i18n="conax.f3.p">Nachrichten, Gruppen und Reaktionen in Echtzeit — direkt mit Clips, Anzeigen und Orten verknüpft. Schnell, verschlüsselt, ohne Werbung im Gespräch.</p>
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">🌍</div>
+    <b data-i18n="invest.why3.t">Global by Design</b>
+    <p data-i18n="invest.why3.p">Alle Produkte sprechen vom ersten Tag an 51 Sprachen, automatisch übersetzt. Kein Markt ist „später dran" — die Welt ist der Startmarkt.</p>
   </div>
-  <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">🗺</div>
-    <b data-i18n="conax.f4.t">Map</b>
-    <p data-i18n="conax.f4.p">Wer ist gerade in deiner Nähe? Die Live-Karte zeigt dir Freunde, Events, Stories und Anzeigen im Umkreis — so präzise oder so privat, wie du es selbst einstellst.</p>
+</div>
+
+<h2 style="margin-block-start:34px;font-size:clamp(20px,3vw,27px);letter-spacing:-.5px;" data-i18n="invest.models.h">So kannst du <em style="font-style:normal;color:#6db5ff;">einsteigen.</em></h2>
+<div class="grid3" style="margin-block-start:14px;">
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">💼</div>
+    <b data-i18n="invest.m1.t">Capital Partner</b>
+    <p data-i18n="invest.m1.p">Direkte Beteiligung am Unternehmen oder an einzelnen Portalen. Quartalsweise Berichte zu Wachstum, Umsatz und Ergebnis — Gewinnausschüttung oder Reinvestition, du entscheidest.</p>
   </div>
-  <div class="feat glass f-conax">
-    <div class="fic" aria-hidden="true">✨</div>
-    <b data-i18n="conax.f5.t">Begegnungen</b>
-    <p data-i18n="conax.f5.p">Wo und wann haben sich eure Wege gekreuzt? con.ax zeigt dir Begegnungen im Detail — Ort, Zeit, Moment — und hilft dir, verpasste Kontakte wiederzufinden. Immer nur mit beidseitiger Zustimmung.</p>
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">🤝</div>
+    <b data-i18n="invest.m2.t">Strategischer Partner</b>
+    <p data-i18n="invest.m2.p">Du bringst Reichweite, Technologie oder Marktzugang mit? Wir bauen Partnerschaften mit Medien, Infrastruktur- und Vertriebspartnern — weltweit.</p>
   </div>
+  <div class="feat glass">
+    <div class="fic" aria-hidden="true">🚀</div>
+    <b data-i18n="invest.m3.t">Early Backer</b>
+    <p data-i18n="invest.m3.p">Früh einsteigen, bevor die Portale skalieren: kleinere Tickets, gleiche Transparenz. Ideal für Angels, die an Produkt und Team glauben.</p>
+  </div>
+</div>
+
+<div class="glass" style="margin-block-start:26px;padding:26px clamp(18px,3vw,34px);">
+  <b style="font-size:16px;" data-i18n="invest.transp.t">Unser Transparenz-Versprechen</b>
+  <p style="margin-block-start:9px;color:var(--ink-soft);font-size:14.5px;line-height:1.75;" data-i18n="invest.transp.p">Jeder Partner erhält ein persönliches Partner-Portal mit vollem Überblick — wie ein Bankkonto für dein Investment: wohin dein Kapital geflossen ist, wie sich dein Anteil entwickelt, Quartalsberichte mit Plus/Minus und zum Jahresende die klare Wahl — Gewinn auszahlen lassen oder reinvestieren. Das Partner-Portal mit Registrierung und Wallet-Übersicht befindet sich im Aufbau; bis dahin betreuen wir jeden Partner persönlich mit denselben Berichten per E-Mail.</p>
+  <p style="margin-block-start:12px;color:var(--ink-mute);font-size:12px;line-height:1.6;" data-i18n="invest.note">Hinweis: Diese Seite ist eine Einladung zum Gespräch, kein öffentliches Angebot von Wertpapieren oder Kapitalanlagen. Beteiligungen erfolgen ausschließlich auf Grundlage individueller Verträge und der jeweils geltenden Vorschriften (u.&nbsp;a. SEC/USA, EU).</p>
+</div>
+
+<div class="btnrow" style="margin-block-start:24px;">
+  <a class="btn em-link" data-u="i" data-s="Investoren-Anfrage" href="#" data-i18n="invest.cta3">Schreib uns: <span class="em" data-u="i"></span></a>
 </div>
 </main>
 <footer class="sitefooter">
