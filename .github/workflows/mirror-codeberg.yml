@@ -1,0 +1,62 @@
+# iMild.com — Codeberg push mirror (pillar 3, redundancy/backup)
+# Place this identical file in BOTH private repos:
+#   iMildcom/imild-platform  ->  codeberg.org/<CODEBERG_OWNER>/imild-platform
+#   iMildcom/imild-website   ->  codeberg.org/<CODEBERG_OWNER>/imild-website
+# The target repo name is derived automatically from the GitHub repo name.
+#
+# One-way mirror: never commit on Codeberg — the --prune force push below
+# makes GitHub authoritative and would discard Codeberg-only changes.
+#
+# Secrets required (per repo):
+#   CODEBERG_OWNER  e.g. iMildcom
+#   CODEBERG_TOKEN  Codeberg access token, scope "repository: read & write" only
+#
+# Cost safeguards (ARCHITECTURE_v2.md §4): S1 S3 S8
+#   Triggers: pushes to main + weekly cron (catches tags pushed out-of-band)
+#   ~1–2 CI minutes per run.
+
+name: mirror-codeberg
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  schedule:
+    - cron: "17 3 * * 1" # Mondays 03:17 UTC — weekly safety net (S8)
+  workflow_dispatch: {}
+
+concurrency:
+  group: mirror-codeberg
+  cancel-in-progress: true # S1
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10 # S3
+    steps:
+      - name: Mirror-clone source repo (full history, all branches + tags)
+        run: |
+          set -euo pipefail
+          git clone --mirror \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
+            source.git
+
+      - name: Push branches + tags to Codeberg (pruned force push)
+        env:
+          CODEBERG_OWNER: ${{ secrets.CODEBERG_OWNER }}
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          set -euo pipefail
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          cd source.git
+          # Drop GitHub-internal refs (refs/pull/*) — Codeberg rejects them.
+          # Push only real branches and tags; --prune removes refs deleted upstream.
+          git push --prune \
+            "https://${CODEBERG_OWNER}:${CODEBERG_TOKEN}@codeberg.org/${CODEBERG_OWNER}/${REPO_NAME}.git" \
+            '+refs/heads/*:refs/heads/*' \
+            '+refs/tags/*:refs/tags/*'
+          echo "Mirrored ${GITHUB_REPOSITORY} -> codeberg.org/${CODEBERG_OWNER}/${REPO_NAME}"
+
